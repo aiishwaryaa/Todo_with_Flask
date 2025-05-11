@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% block body %}
+<!-- Hero Section -->
+<section class="hero-section py-5" style="background: linear-gradient(to right, #108cc1, #022934); color: white;">
+  <div class="container text-center">
+    <h1 class="display-4 animate__animated animate__fadeInDown">Welcome to To-Do App</h1>
+    <p class="lead mt-3 animate__animated animate__fadeInUp">
+      Stay organized and boost productivity with our simple yet powerful task manager.
+    </p>
+    <a href="/" class="btn btn-light btn-lg mt-4 animate__animated animate__zoomIn">Get Started</a>
+  </div>
+</section>
+
+<!-- About the App -->
+<div class="container my-5">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <h2 class="text-primary">About Our To-Do App</h2>
+      <p class="mt-4">
+        Welcome to our Beginner-Friendly To-Do App! 🚀 Built with Flask, this simple yet powerful app helps you stay organized effortlessly.
+      </p>
+      <p>
+        Easily add, update, and delete your tasks in just a few clicks—because managing your to-dos shouldn't feel like a task itself!
+      </p>
+      <p>
+        Whether you're starting your coding journey or just need a no-fuss task manager, this app has got you covered. Ready to boost your productivity? Start ticking off those tasks now! ✅
+      </p>
+    </div>
+    <div class="col-md-6 text-center">
+      <img
+        src="https://i.pinimg.com/736x/55/f9/98/55f998d8fd35250b40cb4d861f087dae.jpg"
+        class="img-fluid rounded shadow"
+        alt="To-Do App"
+        style="border: 3px solid #108cc1;"
+      />
+    </div>
+  </div>
+</div>
+
+<!-- Key Features Section -->
+<div class="container mb-5">
+  <h2 class="text-center mb-4">Key Features</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card feature-card p-3 text-center shadow-sm">
+        <i class="fas fa-tasks fa-2x text-primary mb-3"></i>
+        <h5 class="card-title">Easy Task Management</h5>
+        <p class="card-text">Add, edit, and delete tasks effortlessly with a user-friendly interface.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card feature-card p-3 text-center shadow-sm">
+        <i class="fas fa-bell fa-2x text-success mb-3"></i>
+        <h5 class="card-title">Deadline Reminders</h5>
+        <p class="card-text">Never miss a deadline with timely notifications and reminders.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card feature-card p-3 text-center shadow-sm">
+        <i class="fas fa-layer-group fa-2x text-info mb-3"></i>
+        <h5 class="card-title">Organized Categories</h5>
+        <p class="card-text">Sort your tasks into categories for better organization.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Step-by-Step Guide -->
+<div class="container my-5">
+  <h2 class="text-center text-primary mb-4">How to Use the App</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <ol class="step-guide">
+        <li><strong>Step 1:</strong> Navigate to the homepage and click "Add a To-Do."</li>
+        <li><strong>Step 2:</strong> Fill out the form with a title and description for your task.</li>
+        <li><strong>Step 3:</strong> Hit the "Submit" button to add the task to your list.</li>
+        <li><strong>Step 4:</strong> View all your tasks in the "Your ToDos" section.</li>
+        <li><strong>Step 5:</strong> Use the "Update" button to edit tasks or "Delete" to remove them.</li>
+      </ol>
+    </div>
+    <div class="col-md-6 text-center">
+      <img
+        src="https://i.pinimg.com/736x/55/f9/98/55f998d8fd35250b40cb4d861f087dae.jpg"
+        class="img-fluid rounded shadow"
+        alt="Step Guide"
+        style="border: 2px solid #108cc1;"
+      />
+    </div>
+  </div>
+</div>
+
+<!-- Call-to-Action -->
+<section class="cta-section py-4" style="background: #f8f9fa;">
+  <div class="container text-center">
+    <h2 class="mb-3">Ready to Boost Your Productivity?</h2>
+    <a href="/" class="btn btn-primary btn-lg">Start Adding Tasks Now</a>
+  </div>
+</section>
+
+{% endblock body %}

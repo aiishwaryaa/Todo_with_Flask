@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container">
+  <h2 class="text-center mt-5">Add a Todo</h2>
+  <form action="/" method="POST">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" class="form-control input" name="title" id="title" aria-describedby="emailHelp">
+    </div>
+    <div class="form-group">
+      <label for="des">Description</label>
+      <input type="text" class="form-control input" name="desc" id="des">
+    </div>
+
+    <button type="submit" class="btn btn-outline-primary">Submit</button>
+  </form>
+</div>
+
+<div class="container my-3">
+  <h2 class="text-center mt-3">Your ToDo's</h2>
+
+  {% if query %}
+    <p class="text-center">
+      Showing results for: <strong>{{ query }}</strong>
+      <a href="/" class="btn btn-link btn-sm">Clear Search</a>
+    </p>
+  {% endif %}
+
+  {% if alltodo|length == 0 %}
+    <div class="alert alert-danger" role="alert">
+      No Todos found! {% if query %} Try a different search term. {% else %} Add your First Todo Now... {% endif %}
+    </div>
+  {% else %}
+    <table class="table table-striped mt-5">
+      <thead>
+        <tr>
+          <th scope="col">SNo.</th>
+          <th scope="col">Title</th>
+          <th scope="col">Description</th>
+          <th scope="col">Time</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for todo in alltodo %}
+          <tr>
+            <th scope="row">{{ loop.index }}</th>
+            <td>{{ todo.title }}</td>
+            <td>{{ todo.desc }}</td>
+            <td>{{ todo.date_created }}</td>
+            <td>
+              <a href="{{ url_for('delete', sno=todo.sno) }}" class="btn btn-outline-danger btn-sm mx-2 mt-1">Delete</a>
+              <a href="{{ url_for('update', sno=todo.sno) }}" class="btn btn-outline-success btn-sm mx-2 mt-1">Update</a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% endif %}
+</div>
+
+{% endblock body %}
